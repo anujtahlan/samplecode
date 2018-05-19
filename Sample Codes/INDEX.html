@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>loginpage</title>
+<link href="css-files/sitename.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+.the-heading {
+	color: #01506D;
+	background-color: #FFF;
+}
+</style>
+<link href="css-files/login.css" rel="stylesheet" type="text/css" />
+<link href="css/sitename.css" rel="stylesheet" type="text/css" />
+</head>
+
+
+<body  background="Desert.jpg" text="#FFFFFF">
+
+<p class="the-heading" style="margin:0px">Its a place to connect with the relatives,colleagues and professionals</p>
+<p style="margin:0px">&nbsp;</p>
+<p align="right" style="margin:0px">IF ALREADY A MEMBER:</p>
+    <p align="right" style="margin:0px">LOGIN</p>
+    <p align="right" style="margin:0px"> </p></table>
+    <hr>
+    <form action="login-exec.php" method="post" name="form1" id="form1">
+      <p align="right"><b>Username        
+      <label for=""></label>
+        <input name="login" type="text" id="login" size="20" maxlength="20"/>
+      </b></p>
+      <p align="right"><b>Password</b>
+        <label for="password"></label>
+        <input name="password" type="password" id="password" size="10"/>
+      </p>
+      <p align="right">
+        <label for="textarea"></label>
+        <label for="textfield"></label>
+      </p>
+      <p align="right">
+        <input type="submit" name="save" id="save" value="login"/>
+      </p>
+</form>
+    
+    <p>
+ 
+</div>
+<td rowspan="3" valign="top" bgcolor="#ffffff">
+   <div id="SITENAME" style= "position:fixed; left: 20px; top: 90px; width: 49px; height: 333px;">
+     <p><span class="sitename">I<br />
+     L</span><span class="sitename"><br/>
+     I<br/>
+      N<br />
+      K<br />
+      'd<br />
+             
+</span><br/>
+     </div>
+   
+    <p style="margin:0px"> 
+        <div align="center"></div>
+        </br>
+        </p>
+       <?php
+	session_start();
+	?>
+  <?php
+	if( isset($_SESSION['ERRMSG_ARR']) && is_array($_SESSION['ERRMSG_ARR']) && count($_SESSION['ERRMSG_ARR']) >0 ) {
+		echo '<ul class="err">';
+		foreach($_SESSION['ERRMSG_ARR'] as $msg) {
+			echo '<li>',$msg,'</li>'; 
+		}
+		echo '</ul>';
+		unset($_SESSION['ERRMSG_ARR']);
+	}
+?>
+    </p>
+    <p align="center">&nbsp;</p>
+    <hr />
+    <p align="center">&nbsp;</p>
+<div align="center">
+<form action="register-exec.php" method="post" name="signup" id="signup">
+     <p align="right">FIRST NAME:
+      
+       <input name="fname" type="text" id="fname" size="30" maxlength="30" />
+     </p>
+     <p align="right">LAST NAME: 
+       
+       <input name="lname" type="text" id="lname" size="30" maxlength="30" />
+     </p>
+     <p align="right">LOGIN:
+       
+       <input name="login" type="text" id="login" size="30" maxlength="30" />
+     </p>
+     <p align="right">PASSWORD:
+       <input name="password" type="password" id="password" size="20" maxlength="20" />
+     </p>
+     <p align="right">CONFIRM PASSWORD:
+      
+       <input name="cpassword" type="password" id="cpassword" size="20" maxlength="20" />
+     </p>
+     
+   
+       <div align="right">
+         <input type="submit" name="submit" id="submit" value="signup" />
+         </p>
+       </div>
+</form>
+<div align="right">
+  </p>
+</div>
+
+  
+</body>
+
+</html>
